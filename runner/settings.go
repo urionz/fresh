@@ -27,6 +27,8 @@ var settings = map[string]string{
 	"no_rebuild_ext":    ".tpl, .tmpl, .html",
 	"ignored":           "assets, tmp",
 	"build_delay":       "600",
+	"command":			 "",
+	"flag":				 "",
 	"colors":            "1",
 	"log_color_main":    "cyan",
 	"log_color_build":   "yellow",
@@ -125,6 +127,14 @@ func buildPath() string {
 		p += ".exe"
 	}
 	return p
+}
+
+func flag() string {
+	return settings["flag"]
+}
+
+func command() string {
+	return settings["command"]
 }
 
 func buildErrorsFileName() string {
